@@ -1,11 +1,11 @@
 document.getElementById("peliculas").addEventListener("click", function () {
     document.getElementById("contenido").hidden = false;
     document.getElementById("form_new_actor").hidden = true;
-    fetch("http://localhost/apisakila/peliculas/all", {
+    fetch("http://192.168.100.166/apisakila/peliculas/all", {
         method: "GET",
         headers: {
             "Content-Type": "application/json",
-            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJ0dS1hcGkuY29tIiwiYXVkIjoidHUtYXBpLmNvbSIsImlhdCI6MTczOTQ3MTgyMCwiZXhwIjoxNzM5NDc1NDIwLCJ1c2VyX2lkIjoxfQ.cTJFlI7_nhiqyaeJ3NNzrJRKV1u_zq4CrYtSMobJF3s"
+            "Authorization": "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIxOTIuMTY4LjEwMC4xNjYiLCJhdWQiOiIxOTIuMTY4LjEwMC4xNjYiLCJpYXQiOjE3Mzk0NzM3OTYsImV4cCI6MTczOTQ3NzM5NiwidXNlcl9pZCI6MX0.k015TqACp-2ukcs_KC-fnV0kJI9OWdgOTbjnkJSgR4g"
         }
     })
     .then(response => response.json())
